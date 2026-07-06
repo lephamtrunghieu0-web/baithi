@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bóng Đá Quốc Tế</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">THỂ THAO 247</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="bongda-vn.html">Bóng Đá VN</a></li>
+                <li><a href="bongda-qt.html" class="active">Bóng Đá Quốc Tế</a></li>
+                <li><a href="quanvot.html">Quần Vợt</a></li>
+                <li><a href="login.html">Đăng Nhập</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Ngoại Hạng Anh Kịch Tính Đến Vòng Đấu Cuối Cùng</h2>
+        <p>Cuộc đua vô địch năm nay diễn ra vô cùng hấp dẫn giữa các đội bóng top đầu. Khoảng cách điểm số cực kỳ mong manh khiến cho mỗi trận đấu đều như một trận chung kết...</p>
+
+        <h3 style="margin-top:30px;" class="section-title">Tin liên quan</h3>
+        <ul>
+            <li><a href="bongda-vn.html" style="color: #d32f2f;">Cầu thủ Việt Nam học hỏi gì từ chiến thuật bóng đá châu Âu?</a></li>
+        </ul>
+
+        <section class="comment-section">
+            <h3>💬 Ý kiến bạn đọc (Phản hồi ý kiến)</h3>
+            <form id="commentForm">
+                <div class="form-group">
+                    <label>Tên của bạn:</label>
+                    <input type="text" id="commentUser" required placeholder="Nhập tên...">
+                </div>
+                <div class="form-group">
+                    <label>Bình luận:</label>
+                    <textarea id="commentContent" rows="3" required placeholder="Viết phản hồi ý kiến của bạn tại đây..."></textarea>
+                </div>
+                <button type="submit">Gửi bình luận</button>
+            </form>
+
+            <div id="commentList">
+                <div class="comment-item">
+                    <strong>Nguyễn Văn A:</strong> Trận đấu tối qua quá mãn nhãn, trọng tài bắt rất chuẩn!
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
