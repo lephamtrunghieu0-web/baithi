@@ -2,6 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bóng Đá Việt Nam</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -20,20 +21,77 @@
         </nav>
     </header>
 
-    <main class="container">
-        <h2>Đội Tuyển Việt Nam Quyết Tâm Săn Vé Vòng Loại Châu Á</h2>
-        <p style="color:#666;">Cập nhật ngày: Hôm nay</p>
-        <hr style="margin: 15px 0;">
+    <div class="container main-layout">
         
-        <p>Huấn luyện viên trưởng vừa công bố danh sách tập trung chính thức với nhiều gương mặt trẻ tài năng. Toàn đội đang tích cực tập luyện nhằm hướng tới mục tiêu giành trọn 3 điểm trong trận ra quân sắp tới...</p>
-        
-        <h3 style="margin-top: 40px;" class="section-title">Tin liên quan khác</h3>
-        <ul>
-            <li><a href="bongda-qt.html" style="color: #d32f2f;">[Quốc tế] Đối thủ của Việt Nam đá giao hữu đạt kết quả khủng</a></li>
-            <li><a href="quanvot.html" style="color: #d32f2f;">[Hậu trường] Các cầu thủ xả stress bằng bộ môn quần vợt</a></li>
-        </ul>
-    </main>
+        <main class="article-content">
+            <h2 class="article-title">Đội Tuyển Việt Nam Quyết Tâm Săn Vé Vòng Loại Châu Á</h2>
+            <div class="article-meta">Cập nhật ngày: Hôm nay | Tác giả: Thể Thao 247</div>
+            
+            <div class="article-thumb">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200&auto=format&fit=crop" alt="Đội tuyển Việt Nam tập luyện">
+                <p class="img-caption">Toàn đội đang nỗ lực hết mình trên sân tập trước giờ ra quân.</p>
+            </div>
 
-    <script src="script.js"></script>
+            <p class="paragraph">Huấn luyện viên trưởng vừa công bố danh sách tập trung chính thức với nhiều gương mặt trẻ tài năng. Toàn đội đang tích cực tập luyện nhằm hướng tới mục tiêu giành trọn 3 điểm trong trận ra quân sắp tới...</p>
+            <p class="paragraph">Chiến thuật phòng ngự phản công nhanh tiếp tục được mài giũa kỹ lưỡng. Sự trở lại của các trụ cột sau chấn thương đem lại niềm tin lớn cho người hâm mộ nước nhà.</p>
+            
+            <div class="interact-bar">
+                <button id="likeBtn">❤️ Thích bài viết (<span id="likeCount">0</span>)</button>
+                <button id="shareBtn" style="background:#007bff;">🔗 Chia sẻ nhanh</button>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h3 class="section-title">🔥 Tin liên quan khác</h3>
+                <ul class="related-list">
+                    <li>
+                        <a href="bongda-qt.html">
+                            <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?q=80&w=150" alt="Tin 1">
+                            <span>[Quốc tế] Đối thủ của Việt Nam đá giao hữu đạt kết quả khủng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="quanvot.html">
+                            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=150" alt="Tin 2">
+                            <span>[Hậu trường] Các cầu thủ xả stress bằng bộ môn quần vợt</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3 class="section-title">📅 Lịch Thi Đấu Sắp Tới</h3>
+                <div class="match-widget">
+                    <p><strong>Việt Nam vs Thái Lan</strong></p>
+                    <p style="color: #d32f2f; font-size: 14px; font-weight: bold;">19:00 - Ngày 15/07</p>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // 1. Hiệu ứng thả tim tương tác
+            let count = 0;
+            $('#likeBtn').click(function(){
+                count++;
+                $('#likeCount').text(count);
+                $(this).css('transform', 'scale(1.1)').animate({transform: 'scale(1)'}, 100);
+            });
+
+            // 2. Hiệu ứng thông báo chia sẻ nhanh
+            $('#shareBtn').click(function(){
+                alert('🔗 Đã sao chép liên kết bài viết vào bộ nhớ tạm!');
+            });
+
+            // 3. Hiệu ứng làm nổi bật tin liên quan khi rê chuột vào
+            $('.related-list li').hover(
+                function() { $(this).find('span').css('color', '#d32f2f'); },
+                function() { $(this).find('span').css('color', '#333'); }
+            );
+        });
+    </script>
 </body>
 </html>
